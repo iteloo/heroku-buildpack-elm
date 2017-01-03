@@ -48,6 +48,7 @@ echo $(which stack)
 echo "export PATH=${cache}/bin/elm-${ELM_VERSION}:$PATH" >> $buildpack/export
 PATH=${cache}/bin/elm-${ELM_VERSION}:$PATH
 echo "$PATH"
+echo $(ls /app/tmp/cache/.local/bin)
 
 mkcd ${cache}/bin/elm-${ELM_VERSION}
 echo "-----> Retrieving ${ELM_VERSION}"
